@@ -71,7 +71,7 @@
 
 
 
-console.log('client side javascript file is loaded')
+// console.log('client side javascript file is loaded')
 
 
 //fetch concept
