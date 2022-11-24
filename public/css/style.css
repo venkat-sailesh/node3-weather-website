@@ -4,7 +4,6 @@ body{
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,6 +11,8 @@ body{
 
 .main-content{
     flex-grow: 1;
+    
+    
 }
 
 footer{
@@ -46,8 +47,13 @@ header a:hover{
 }
 
 input{
-   border: 1px solid #cccccc;
+    border: none;
+   border-bottom: 2px solid #cccccc;
    padding: 8px;
+   outline:none;
+   background: none;
+   color: white;
+
 }
 button{
     cursor: pointer;
@@ -55,4 +61,9 @@ button{
     background: #888888;
     color: white;
     padding: 8px;
+}
+.index-form-edit{
+    background-color: #888888;
+    padding: 10px;
+    width: 250px;
 }

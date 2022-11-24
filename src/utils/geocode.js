@@ -18,13 +18,13 @@ const geocode = (address, callback) =>{
 
          callback('Unable to connect to location services!', undefined)
 
-     // } else if(response.body.error){
+    //   } else if(response.body.error){
 
-     //     callback('Location not found', undefined)
+    //     callback('Location not found', undefined)
 
- 
+     }
 
-     } else{
+    else{
 
          callback(undefined, {
 

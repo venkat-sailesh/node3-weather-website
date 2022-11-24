@@ -88,6 +88,7 @@ const weatherform=document.querySelector('form')
 const search=document.querySelector('input')
 const messageOne=document.getElementById('message-1')
 const messagetwo=document.getElementById('message-2')
+const messageThree=document.getElementById('message-3')
 // messageOne.textContent="Loading...."
 // messagetwo.textContent=""
 // messageOne.textContent="Loading...."
@@ -105,14 +106,16 @@ messagetwo.textContent=""
 fetch('http://localhost:3000/weather?address=' +  location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
-          messageOne.textContent=dat.error
+          messageOne.textContent=data.error
         }
         else{
             messageOne.textContent=data.location
-            messagetwo.textContent=data.forecast
+            messagetwo.textContent=data.forecast.loc
+            messageThree.textContent=data.forecast.tem
             console.log(data.location)
-            console.log(data.forecast)
+            console.log(data.forecast.tem)
         }
     })
     })
 })
+

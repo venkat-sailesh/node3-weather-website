@@ -17,10 +17,17 @@ const forecast = (latitude, longitude, callback)=>{
             callback('Unable to connect to weather service', undefined)
 
         }
-
+        // else if(response.body.error){
+        //     callback('Location not found', undefined)
+        // }
         else{
  
-             callback(undefined, response.body.location.localtime)
+             callback(undefined, {
+                loc: response.body.location.localtime,
+                tem: response.body.current.temperature
+                
+            
+            })
 
         }
 
