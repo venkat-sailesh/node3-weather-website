@@ -23,8 +23,8 @@ const forecast = (latitude, longitude, callback)=>{
         else{
  
              callback(undefined, {
-                loc: response.body.location.localtime,
-                tem: response.body.current.temperature
+                loc: response.body.location.localtime + ' This is the local time for the current location  ',
+                tem: response.body.current.temperature,
                 
             
             })
